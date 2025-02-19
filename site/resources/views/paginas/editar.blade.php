@@ -1,24 +1,25 @@
 <x-layout titulo="Editar">
-    <form action="../atualizar/{{$dado->id}}" method="GET">
-        <label>Id</label>
+      <form action="../atualizar/{{$dado->id}}" method="get">
+        <label>Id </label>
         <input type="number" id="number" value="{{$dado->id}}" disabled required/>
         <br><br>
 
         <label>Nome</label>
-        <input type="text" id="text" name="nome" value="{{$dado->nome}}" required/>
+        <input type="text" id="nome" name="nome" value="{{$dado->nome}}" required/>
         <br><br>
 
         <label>Email</label>
-        <input type="text" id="text" value="{{$dado->email}}" required/>
+        <input type="text" id="email" name="email" value="{{$dado->email}}" required/>
         <br><br>
         
         <label>Senha</label>
-        <input type="password" id="password" name="senha" value="{{$dado->senha}}" required/>
+        <input type="password" id="senha" name="senha" value="{{$dado->senha}}" required/>
         <br><br>
         
         <label>Endereço</label>
-        <input type="text" id="text" name="endereco" value="{{$dado->endereco}}" required/>
+        <input type="text" id="endereco" name="endereco" value="{{$dado->endereco}}" required/>
         <br><br>
+
 
         
         

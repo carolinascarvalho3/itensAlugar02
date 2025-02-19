@@ -9,7 +9,7 @@ class siteController extends Controller
 {
     public function index(){
         $dados = modelSite::all();//todos os dados da tabela
-        return view('paginas.cadastrar')->With('dados',$dados);
+        return view('paginas.cadastrar')->With('dado',$dados);
     }//fim do método - retornar dados
 
     public function store(Request $request){
@@ -30,11 +30,6 @@ class siteController extends Controller
         return redirect('/cadastro');
     }//fim do método do cadastro
 
-    //public function consultar(){
-        //$ids = modelSite::all();
-        //return view('paginas.consultar', compact('ids'));
-    //}//fim do método
-
     public function editar($id){
         $dado = modelSite::findOrFail($id);
         return view('paginas.editar', compact('dado'));
@@ -42,7 +37,7 @@ class siteController extends Controller
     
     public function atualizar(Request $request, $id){
         modelSite::where('id', $id)->update($request->all());
-        redirec('/consultar');
+        return redirec('/consultar');
     }//fim do método 
 
     public function excluir(Request $request, $id){

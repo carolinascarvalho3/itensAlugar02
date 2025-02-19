@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cadastro', function (Blueprint $table) {
-            $table->id();
-            $table->nome();
-            $table->email();
-            $table->senha();
-            $table->endereco();
-            $table->dataNacimento();
+            $table->increments('id');
+            $table->text('nome');
+            $table->text('email');
+            $table->text('senha');
+            $table->text('endereco');
+            $table->date('dataNascimento');
+            $table->timestamps();
         });
     }
 
