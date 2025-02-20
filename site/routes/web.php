@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controller\siteController;
 
-
 Route::get('/', function () {
     return view('paginas/index');
 });
@@ -13,11 +12,17 @@ Route::get('/cadastrar', function(){
     return view('paginas/cadastrar');
 });
 
+Route::get('/consultar', function(){
+    return view('paginas/consultar');
+});
+
 Route::get('/editar', function(){
     return view('paginas/editar');
 });
 
 Route::get('/cadastrar/salvar',[App\Http\Controllers\siteController::class, 'store']);
+
+Route::get('/consultar',[App\Http\Controllers\siteController::class, 'consultar']);
 
 Route::get('/editar/{id}',[App\Http\Controllers\siteController::class, 'editar']);
 
