@@ -11,16 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cadastro', function (Blueprint $table) {
+        Schema::create('reserva', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('nome');
-            $table->text('email');
-            $table->text('senha');
-            $table->text('endereco');
-            $table->date('dataNascimento');
-
-
-            
+            $table->text('nomeReserva');
+            $table->text('enderecoReserva');
+            $table->date('dataInicio');
+            $table->date('dataFinal');
+            $table->time('horario');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cadastro');
+        Schema::dropIfExists('reserva');
     }
 };
