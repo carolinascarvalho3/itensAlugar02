@@ -51,4 +51,17 @@ class siteController extends Controller
         return redirect('/consultar');
     }
 
+    public function indexx(){
+        return view('entrar')
+    }
+
+    public function store(Request $request){
+        $request->validate([
+            'email' = 'required/email',
+            'senha' = 'required'
+        ], [
+            'email.'
+        ])
+    }
+
 }//todas as operações do banco de dados

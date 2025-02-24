@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class modelSite extends Model
+class modelReserva extends Model
 {
     use HasFactory;//fatoração - dividir
     protected $table = 'reserva'; //nome da tabela

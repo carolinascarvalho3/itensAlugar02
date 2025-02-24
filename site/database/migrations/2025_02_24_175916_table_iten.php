@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('itens', function (Blueprint $table) {
+        Schema::create('iten', function (Blueprint $table) {
             $table->increments('id');
             $table->text('nomeProduto');
             $table->text('anuncio');
             $table->text('preco');
-            $table->text('imagen');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('itens');
+        Schema::dropIfExists('iten');
     }
 };
