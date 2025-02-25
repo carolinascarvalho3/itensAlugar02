@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\modelSite;
+use Resources\Views\Paginas\entrar;
 
 class siteController extends Controller
 {
@@ -51,17 +52,12 @@ class siteController extends Controller
         return redirect('/consultar');
     }
 
-    public function indexx(){
-        return view('entrar')
+    public function entrar(){
+        if(id->email == 'email'){
+            return redirect('/perfil');
+        }
     }
 
-    public function store(Request $request){
-        $request->validate([
-            'email' = 'required/email',
-            'senha' = 'required'
-        ], [
-            'email.'
-        ])
-    }
+    
 
 }//todas as operações do banco de dados

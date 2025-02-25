@@ -41,10 +41,11 @@
     </style>
 
     <h2>LOGIN</h2>
-
+       
     <div class="entrarP">
         <form action="entrar/salvar" method="GET" class="form">
             @csrf <!-- Abrir as portas do servidor -->
+            
 
                 <br> 
                 <label name="email">Email</label>
@@ -57,13 +58,11 @@
                 </div>
                 <br><br>
 
-        
-
+                
+            
                 <button type="submit" id="botao0" class="btn btn-dark btn-lg">ENTRAR
                     <?php
-                        if(
-                            $id == 'email' && 'senha';
-                        )
+                        
                     ?>
                 </button>
         </form>

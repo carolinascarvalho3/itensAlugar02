@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controller\siteController;
 use App\Http\Controller\reservaController;
 use App\Http\Controller\itenController;
+use App\Http\Controller\loginController;
 
 Route::get('/', function () {
     return view('paginas/index');
