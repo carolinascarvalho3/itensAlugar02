@@ -1,5 +1,8 @@
 <x-layout titulo="Editar">
-      <form action="../atualizar/{{$dado->id}}" method="get">
+    
+  
+      <form action="../atualizar/{{$dado->id}}" method="GET">
+      @csrf
         <label>Id </label>
         <input type="number" id="number" value="{{$dado->id}}" disabled required/>
         <br><br>

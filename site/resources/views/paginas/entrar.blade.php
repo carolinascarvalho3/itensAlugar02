@@ -43,27 +43,31 @@
     <h2>LOGIN</h2>
        
     <div class="entrarP">
-        <form action="entrar/salvar" method="GET" class="form">
+        <form action="entrar" method="GET" class="form">
             @csrf <!-- Abrir as portas do servidor -->
             
 
                 <br> 
-                <label name="email">Email</label>
-                <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com" required>
+                <label name="emailLog">Email</label>
+                <input type="email" class="form-control" name="emailLog" id="exampleFormControlInput1" placeholder="name@example.com" required>
                 <br><br>
 
-                <label name="senha">Senha</label>
-                <input type="password" name="senha" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
+                <label name="senhaLog">Senha</label>
+                <input type="password" name="senhaLog" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
                 <div id="passwordHelpBlock" class="form-text">
                 </div>
                 <br><br>
 
-                
-            
                 <button type="submit" id="botao0" class="btn btn-dark btn-lg">ENTRAR
+                @foreach($ids as $id)
+                
                     <?php
-                        
+                        if('emailLog' == $id->email){
+                            return redirect('/perfil');
+                        }
                     ?>
+                
+                @endforeach
                 </button>
         </form>
 

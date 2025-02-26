@@ -15,8 +15,12 @@ Route::get('/cadastrar', function(){
     return view('paginas/cadastrar');
 });
 
+Route::get('/perfil', function(){
+    return view('paginas/perfil');
+});
+
 Route::get('/consultar', function(){
-    return view('paginas/consultar');
+    return view('paginas/consult');
 });
 
 Route::get('/verItens', function(){
@@ -46,11 +50,15 @@ Route::get('/entrar', function(){
 
 Route::get('/cadastrar/salvar',[App\Http\Controllers\siteController::class, 'store']);
 
+Route::get('/perfil',[App\Http\Controllers\siteController::class, 'perfil']);
+
 Route::get('/consultar',[App\Http\Controllers\siteController::class, 'consultar']);
 
 Route::get('/verItens',[App\Http\Controllers\itenController::class, 'verItens']);
 
 Route::get('/editar/{id}',[App\Http\Controllers\siteController::class, 'editar']);
+
+Route::get('/entrar',[App\Http\Controllers\loginController::class, 'entrar']);
 
 Route::get('/editarIten/{id}',[App\Http\Controllers\itenController::class, 'editarIten']);
 

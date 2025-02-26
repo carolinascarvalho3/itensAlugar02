@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\modelSite;
-use Resources\Views\Paginas\entrar;
+//use App\Controllers\loginController;
 
 class siteController extends Controller
 {
@@ -31,13 +31,15 @@ class siteController extends Controller
         return redirect('/cadastrar');
     }//fim do método do cadastro
 
-    public function consultar()
+    
+
+    public function perfil()
     {
         $ids = modelSite::all();
-        return view('paginas.consultar', compact('ids'));
+        return view('paginas.perfil', compact('ids'));
     }//fim do método
 
-    public function editar($id){
+    public function editar(Request $request, $id){
         $dado = modelSite::findOrFail($id);
         return view('paginas.editar', compact('dado'));
     }//fim do método
@@ -52,11 +54,7 @@ class siteController extends Controller
         return redirect('/consultar');
     }
 
-    public function entrar(){
-        if(id->email == 'email'){
-            return redirect('/perfil');
-        }
-    }
+    //FAZER A PORRA DO CONSULTAR BURRO DO CCARALHO
 
     
 
