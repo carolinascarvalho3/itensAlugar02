@@ -30,7 +30,11 @@ class siteController extends Controller
         return redirect('/cadastrar');
     }//fim do método do cadastro
 
-    
+    public function consultar()
+    {
+        $ids = modelSite::all();
+        return view('paginas.consultar', compact('ids'));
+    }//fim do método
 
     public function perfil()
     {
