@@ -1,10 +1,10 @@
 <x-layout titulo="Editar">
-    
+@csrf
   
       <form action="../atualizar/{{$dado->id}}" method="GET">
-      @csrf
+      
         <label>Id </label>
-        <input type="number" id="number" value="{{$dado->id}}" disabled required/>
+        <input type="number" id="id" value="{{$dado->id}}" disabled required/>
         <br><br>
 
         <label>Nome</label>

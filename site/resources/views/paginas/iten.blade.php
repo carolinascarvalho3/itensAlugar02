@@ -48,7 +48,7 @@
     <h2>CADASTRAR PRODUTOS</h2>
 
     <div class="cadastroProduto">
-        <form action="cadastrar/salvar" method="GET" class="form">
+        <form action="iten/salvar" method="GET" class="form">
             @csrf <!-- Abrir as portas do servidor -->
 
                 <br>

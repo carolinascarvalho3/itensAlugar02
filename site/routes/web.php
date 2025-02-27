@@ -10,7 +10,6 @@ Route::get('/', function () {
     return view('paginas/index');
 });
 
-
 Route::get('/cadastrar', function(){
     return view('paginas/cadastrar');
 });
@@ -20,7 +19,7 @@ Route::get('/perfil', function(){
 });
 
 Route::get('/consultar', function(){
-    return view('paginas/consult');
+    return view('paginas/consultar');
 });
 
 Route::get('/verItens', function(){
@@ -56,7 +55,7 @@ Route::get('/consultar',[App\Http\Controllers\siteController::class, 'consultar'
 
 Route::get('/verItens',[App\Http\Controllers\itenController::class, 'verItens']);
 
-Route::get('/editar/{id}',[App\Http\Controllers\siteController::class, 'editar']);
+Route::get('/editar',[App\Http\Controllers\siteController::class, 'editar']);
 
 Route::get('/entrar',[App\Http\Controllers\loginController::class, 'entrar']);
 

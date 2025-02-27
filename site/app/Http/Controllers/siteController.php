@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\modelSite;
-//use App\Controllers\loginController;
 
 class siteController extends Controller
 {
@@ -39,10 +38,12 @@ class siteController extends Controller
         return view('paginas.perfil', compact('ids'));
     }//fim do método
 
-    public function editar(Request $request, $id){
+    public function editar($id){
         $dado = modelSite::findOrFail($id);
         return view('paginas.editar', compact('dado'));
     }//fim do método
+
+    
     
     public function atualizar(Request $request, $id){
         modelSite::where('id', $id)->update($request->all());
@@ -54,7 +55,7 @@ class siteController extends Controller
         return redirect('/consultar');
     }
 
-    //FAZER A PORRA DO CONSULTAR BURRO DO CCARALHO
+    
 
     
 

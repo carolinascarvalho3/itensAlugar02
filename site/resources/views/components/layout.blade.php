@@ -81,7 +81,7 @@
                             <a class="nav-link" href="/cadastrar">CADASTRE-SE</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="/entrar">ENTRAR</a>
+                            <a class="nav-link" href="/perfil">SEU PERFIL</a>
                             </li>
                         </ul>
                         </div>
