@@ -40,7 +40,7 @@
     </style>
     <div class="container" id="botoes">
         <a href="/iten"><button type="button" id="o1" class="btn btn-outline-dark">Cadastrar Produtos</button></a>
-        <a href="/editar"><button type="button" id="o2" class="btn btn-outline-dark">Editar Produtos</button></a>
+        <a href="/consultar"><button type="button" id="o2" class="btn btn-outline-dark">Consultar Produtos</button></a>
         <a href="#"><button type="button" id="o3" class="btn btn-outline-dark">Meus Anúncios</button></a>
     </div>
 
