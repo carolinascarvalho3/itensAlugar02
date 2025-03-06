@@ -40,12 +40,33 @@
     </style>
     <div class="container" id="botoes">
         <a href="/iten"><button type="button" id="o1" class="btn btn-outline-dark">Cadastrar Produtos</button></a>
-        <a href="/consultar"><button type="button" id="o2" class="btn btn-outline-dark">Consultar Produtos</button></a>
-        <a href="#"><button type="button" id="o3" class="btn btn-outline-dark">Meus Anúncios</button></a>
+        <a href="/consultar"><button type="button" id="o2" class="btn btn-outline-dark">Consultar Logins</button></a>
     </div>
 
     <div class="divisoria"></div>
 
     <h2>MEUS ANÚNCIOS</h2>
+    @csrf
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Nome do iten</th>
+            <th>Anuncio</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach($ids as $id)
+        <tr>
+            <td>{{$id->nomeProduto}}</td>
+            <td>{{$id->anuncio}}</td>
+            <td>{{$id->preco}}</td>
+        <th>
+        
+                
+    @endforeach
+    </tbody>
+    </table>
 
 </x-layout>

@@ -58,7 +58,7 @@
                 <label name="senha">Senha</label>
                 <input type="password" name="senha" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
                 <div id="passwordHelpBlock" class="form-text">
-                    Sua senha deve conter de 8-20 caracteres, conter letras e números, sem conter espaços, caracteres especiais ou emoji.
+                    Sua senha deve conter de 8-20 caracteres, conter letras e números, sem conter espaços ou caracteres especiais.
                 </div>
                 <br><br>
 
@@ -70,9 +70,15 @@
                 <input type="date" name="dataNascimento" placeholder="00/00/0000" required>
                 <br><br>
 
-        
+                
 
-                <button type="submit" id="botao0" class="btn btn-dark btn-lg">CADASTRAR</button>
+                <!--<button type="submit" id="botao0" class="btn btn-dark btn-lg" data-bs-toggle="modal">CADASTRAR</button>-->
+
+                <button type="submite" id="voltar" class="btn btn-dark btn-lg" class="btn btn-primary" class="nav-link"> 
+                    <a href="/">CADASTRAR</a>
+                </button>
+
+                
         </form>
 
     </div>

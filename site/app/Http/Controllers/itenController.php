@@ -32,6 +32,12 @@ class itenController extends Controller
         return view('paginas.verItens', compact('ids'));
     }//fim do método
 
+    public function perfil()
+    {
+        $ids = modelIten::all();
+        return view('paginas.perfil', compact('ids'));
+    }//fim do método
+
     public function excluirIten(Request $request, $id){
         modelIten::where('id', $id)->delete($request->all());
         return redirect('/verItens');
@@ -46,4 +52,6 @@ class itenController extends Controller
         modelIten::where('id', $id)->update($request->all());
         return redirect('/verItens');
     }//fim do método 
+
+    
 }

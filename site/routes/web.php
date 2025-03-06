@@ -49,7 +49,7 @@ Route::get('/entrar', function(){
 
 Route::get('/cadastrar/salvar',[App\Http\Controllers\siteController::class, 'store']);
 
-Route::get('/perfil',[App\Http\Controllers\siteController::class, 'perfil']);
+Route::get('/perfil',[App\Http\Controllers\itenController::class, 'perfil']);
 
 Route::get('/consultar',[App\Http\Controllers\siteController::class, 'consultar']);
 
