@@ -75,7 +75,7 @@
                 <!--<button type="submit" id="botao0" class="btn btn-dark btn-lg" data-bs-toggle="modal">CADASTRAR</button>-->
 
                 <button type="submite" id="voltar" class="btn btn-dark btn-lg" class="btn btn-primary" class="nav-link"> 
-                    <a href="/">CADASTRAR</a>
+                    CADASTRAR
                 </button>
 
                 
